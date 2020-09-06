@@ -84,7 +84,7 @@ winnings_gif <- ggplot(data = gif_data) + # this is the data
   scale_fill_discrete() +
   guides(color = FALSE, fill = FALSE) +
   
-  labs(title = "PGA Golfer's Cumulative Winnings Through {closest_state}",
+  labs(title = "PGA Golfers' Cumulative Winnings Through {closest_state}",
        x = "",
        y = "Tounament Winnings") +
   theme(
