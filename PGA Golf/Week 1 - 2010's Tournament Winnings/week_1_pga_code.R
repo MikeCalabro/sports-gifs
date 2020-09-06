@@ -7,7 +7,7 @@ library(gifski)
 library(janitor)
 library(scales)
 
-pga <- read_csv("pgaTourData.csv") %>%
+pga <- read_csv("data/pgaTourData.csv") %>%
   clean_names()
 
 players <- deframe(pga %>%
@@ -97,4 +97,4 @@ winnings_gif <- ggplot(data = gif_data) + # this is the data
   ease_aes("cubic-in-out")
 
 animate(winnings_gif, width = 700, height = 500, nframes = 150, end_pause = 15)
-anim_save("week_1_winnings.gif")  
+anim_save("week_1_pga_winnings.gif")  
