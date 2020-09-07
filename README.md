@@ -19,4 +19,4 @@ If you enjoy viewing sports data in motion, you've come to the right Repository!
 ![](https://raw.githubusercontent.com/MikeCalabro/sports-gifs/master/NFL%20Football/Week%201%20McCaffrey%20Catches/week_1_mccaffrey_catches.gif)
 
 
-Check out the rest of the repo for (soon-to-be) many more!
+Check out the rest of the repo for (soon-to-be) many more Sports Gifs!
