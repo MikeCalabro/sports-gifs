@@ -73,5 +73,5 @@ tatis_gif <-
   enter_grow(size = 3.6) +
   enter_fade(alpha = 0.85)
 
-animate(tatis_gif, nframes = 330, end_pause = 30)
+animate(tatis_gif, nframes = 165, end_pause = 15)
 anim_save("week_2_tatis_hr.gif")
