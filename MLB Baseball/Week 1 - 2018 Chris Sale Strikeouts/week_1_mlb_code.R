@@ -82,5 +82,6 @@ sale_gif_2018 <-
        subtitle = "{closest_state}",
        color = "")
 
-animate(sale_gif_2018, fps = 2000, detail = 10, nframes = 520, end_pause = 20)
+# detail = 10, nframes = 520
+animate(sale_gif_2018, fps = 2000, detail = 40, nframes = 520, end_pause = 20)
 anim_save("week_1_sale_strikeout.gif")

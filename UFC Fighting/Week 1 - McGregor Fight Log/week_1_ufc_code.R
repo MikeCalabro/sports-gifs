@@ -38,17 +38,18 @@ conor_gif <-
   labs(color = "",
        title = "Conor McGregor UFC Career Fight Log",
        subtitle = "Fight Date: {next_state}") +
-  scale_x_continuous("Rounds Lasted", limits = c(-0.5, 5.5), breaks = (0:5)) +
+  scale_x_continuous("Rounds Lasted", limits = c(-3.5, 5.5), breaks = (0:5)) +
   scale_y_discrete(labels =  rev(conor_data$opponent)) +
   theme_classic() +
   theme(axis.text = element_text(size = 9),
         axis.title.y = element_blank(),
         legend.position = c(0.9, 0.42)) +
+  coord_cartesian(xlim = c(0, 5.5)) +
   transition_states(date, transition_length = 2, state_length = 0.4, wrap = FALSE) +
   shadow_mark() +
   enter_recolor(color = "black") +
-  enter_fly(x_loc = -0.5)  +
-  enter_fade(alpha = 0.2)
+  enter_fly(x_loc = -3.5)  +
+  enter_fade(alpha = 0.6)
 
-animate(conor_gif, nframes = 220, width = 600, height = 500, end_pause = 20 )
+animate(conor_gif, nframes = 220, width = 600, height = 500, end_pause = 20)
 anim_save("week_1_mcgregor_fights.gif")
