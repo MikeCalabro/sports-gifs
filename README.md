@@ -6,8 +6,9 @@ If you enjoy viewing sports data in motion, you've come to the right Repository!
 
 ### MLB Baseball Week 1
 
-![](https://raw.githubusercontent.com/MikeCalabro/sports-gifs/master/MLB%20Baseball/Week%201%20-%202018%20Chris%20Sale%20Strikeouts/week_1_sale_strikeout.gif)
+![](https://raw.githubusercontent.com/MikeCalabro/sports-gifs/master/MLB%20Baseball/Week%201%20-%202018%20Chris%20Sale%20Strikeouts/week_1_sale_strikeout.gif)  
 
+![](https://raw.githubusercontent.com/MikeCalabro/sports-gifs/master/MLB%20Baseball/Week%202%20-%20Fernando%20Tatis%20HRs/week_2_tatis_hr.gif)
 
 ### PGA Golf Week 1
 
