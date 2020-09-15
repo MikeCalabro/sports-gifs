@@ -17,7 +17,9 @@ If you enjoy viewing sports data in motion, you've come to the right Repository!
 
 ### NFL Football Week 1
 
-![](https://raw.githubusercontent.com/MikeCalabro/sports-gifs/master/NFL%20Football/Week%201%20McCaffrey%20Catches/week_1_mccaffrey_catches.gif)
+![](https://raw.githubusercontent.com/MikeCalabro/sports-gifs/master/NFL%20Football/Week%201%20McCaffrey%20Catches/week_1_mccaffrey_catches.gif)  
 
+![](https://raw.githubusercontent.com/MikeCalabro/sports-gifs/master/NFL%20Football/Week%201%202020%20Bears%20Winning%20Odds/week_1_bears_lions_odds.gif)  
 
+  
 Check out the rest of the repo for (soon-to-be) many more Sports Gifs!
