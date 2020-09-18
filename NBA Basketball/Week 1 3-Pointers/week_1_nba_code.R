@@ -46,3 +46,5 @@ three_pa_gif <-
 
 
 animate(three_pa_gif, nframes = 70, fps = 20, detail = 1.3)
+
+anim_save("week_1_nba_3pa.gif")
