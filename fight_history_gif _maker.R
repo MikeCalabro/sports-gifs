@@ -32,12 +32,11 @@ fighter_data <- function(name) {
       finish == "S-DEC" ~ "DEC",
       finish == "SUB" ~ "SUB"
     )) %>%
-    mutate(opponent = ifelse(r_fighter == name, b_fighter, r_fighter))
+    mutate(opponent = ifelse(r_fighter == name, b_fighter, r_fighter)) %>%
+    arrange(desc(date))
   
   return(data)
 } 
-
-data <- fighter_data(fighter_name)
 
 fighter_plot <- function(name) {
   data <- fighter_data(name) 
