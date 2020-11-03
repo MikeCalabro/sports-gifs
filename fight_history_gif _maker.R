@@ -38,24 +38,32 @@ fighter_data <- function(name) {
   return(data)
 } 
 
+data <- fighter_data(fighter_name)
+
+
 fighter_plot <- function(name) {
   data <- fighter_data(name) 
+  fig_size <- ceiling(60/nrow(data)) + 1
+  text_nudge <- (45 - nrow(data))/100
   plot <- data %>%
     ggplot(aes(x = fight_length, y = factor(date), color = ifelse(winner_name == name, "Win", "Loss"))) +
-    geom_text(aes(label = finish), size = 6, nudge_x = 0.3) +
-    geom_segment(aes(x = 0, y = factor(date), xend = fight_length, yend = factor(date)), size = 6) +
+    geom_segment(aes(x = 0.03, y = factor(date), xend = fight_length + 0.06, yend = factor(date)), size = fig_size + 3, color = "#ECECEC") +
+    geom_segment(aes(x = 0.03, y = factor(date), xend = fight_length + 0.03, yend = factor(date)), size = fig_size + 1, color = "gray") +
+    geom_segment(aes(x = 0, y = factor(date), xend = fight_length, yend = factor(date)), size = fig_size) +
+    geom_text(aes(label = finish, fontface = "bold"), size = fig_size, nudge_x = text_nudge + 0.02, color = "#DCDCDC") +
+    geom_text(aes(label = finish, fontface = "bold"), size = fig_size, nudge_x = text_nudge) +
     labs(color = "",
          title = glue::glue("{name} UFC Career Fight Log"),
          subtitle = "Fight Date: {next_state}",
          caption = "DATA: Kaggle - Ultimate UFC Dataset") +
     scale_x_continuous("Rounds Lasted", limits = c(-3.5, 5.5), breaks = (0:5)) +
     scale_y_discrete(labels =  rev(data$opponent)) +
-    scale_color_manual(values = c("green3", "red")) +
     theme_classic() +
     theme(axis.text = element_text(size = 9),
           axis.title.y = element_blank(),
           legend.position = c(0.9, 0.12)) +
-    coord_cartesian(xlim = c(0, 5.5)) 
+    coord_cartesian(xlim = c(0, 5.5)) +
+    scale_color_manual(values = c("green3")) 
   
   return(plot)
 }
@@ -71,5 +79,5 @@ fights_gif <- plot +
   enter_fly(x_loc = -3.5)  +
   enter_fade(alpha = 0.6)
 
-animate(fights_gif, nframes = 220, width = 600, height = 500, end_pause = 20)
+animate(fights_gif, nframes = 400, width = 850, height = 650, end_pause = 50)
 
