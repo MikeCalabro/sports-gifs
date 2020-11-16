@@ -1,6 +1,6 @@
 # UFC FIGHT HISTORY GIF MAKER
 
-fighter_name <- "Jon Jones"
+fighter_name <- "Colby Covington"
 
 library(tidyverse)
 library(janitor)
@@ -44,7 +44,7 @@ data <- fighter_data(fighter_name)
 fighter_plot <- function(name) {
   data <- fighter_data(name) 
   fig_size <- ceiling(60/nrow(data)) + 1
-  text_nudge <- (45 - nrow(data))/100
+  text_nudge <- (50 - nrow(data))/100
   plot <- data %>%
     ggplot(aes(x = fight_length, y = factor(date), color = ifelse(winner_name == name, "Win", "Loss"))) +
     geom_segment(aes(x = 0.03, y = factor(date), xend = fight_length + 0.06, yend = factor(date)), size = fig_size + 3, color = "#ECECEC") +
@@ -63,7 +63,7 @@ fighter_plot <- function(name) {
           axis.title.y = element_blank(),
           legend.position = c(0.9, 0.12)) +
     coord_cartesian(xlim = c(0, 5.5)) +
-    scale_color_manual(values = c("green3")) 
+    scale_color_manual(values = c("red", "green3")) 
   
   return(plot)
 }
@@ -79,5 +79,5 @@ fights_gif <- plot +
   enter_fly(x_loc = -3.5)  +
   enter_fade(alpha = 0.6)
 
-animate(fights_gif, nframes = 400, width = 850, height = 650, end_pause = 50)
+animate(fights_gif, nframes = 300, width = 850, height = 650, end_pause = 50)
 

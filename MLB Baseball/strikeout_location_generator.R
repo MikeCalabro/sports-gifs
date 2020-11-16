@@ -4,8 +4,8 @@ library(tidyverse)
 library(baseballr)
 library(glue)
 
-pitcher_name <- "Shane Bieber"
-year <- 2020
+pitcher_name <- "Gerrit Cole"
+year <- 2017
 
 player_id_finder <- function(name) {
   player_name <- str_to_title(name)
